@@ -1,7 +1,7 @@
 {
   "name": "gs-agent-skill",
-  "version": "1.2.0",
-  "description": "Independent skills for diagram selection and prompt deepening, with drawio-skill for editable diagrams.",
+  "version": "1.3.0",
+  "description": "Independent skills for diagram selection, prompt deepening, and isolated file-rename commits, with drawio-skill for editable diagrams.",
   "author": {
     "name": "kavenGw",
     "url": "https://github.com/kavenGw"
@@ -15,7 +15,9 @@
     "visualization",
     "architecture",
     "prompt",
-    "planning"
+    "planning",
+    "git",
+    "rename"
   ],
   "dependencies": [
     "drawio-skill"

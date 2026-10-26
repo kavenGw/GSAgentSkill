@@ -1,0 +1,3 @@
+interface:
+  display_name: "Commit Renames"
+  short_description: "拆出纯文件改名提交，保留其他暂存改动、工作区内容与资源 GUID"
