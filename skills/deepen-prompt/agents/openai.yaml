@@ -1,0 +1,6 @@
+interface:
+  display_name: "Deepen Prompt 题目深化"
+  short_description: "想要更好的方案或从第一性原理重想时，以专家视角给出 a–d 分析，grill 确认后生成任务书交新会话执行"
+  default_prompt: "使用 $deepen-prompt 为当前任务找更好的方案：…"
+policy:
+  allow_implicit_invocation: false

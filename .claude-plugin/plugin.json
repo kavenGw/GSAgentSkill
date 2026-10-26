@@ -1,14 +1,23 @@
 {
-  "name": "diagram-advisor",
-  "version": "1.0.0",
-  "description": "Decide which diagram to draw before drawing it: analyze the question, recommend 2-4 diagram types with trade-offs, then hand off to drawio-skill.",
+  "name": "gs-agent-skill",
+  "version": "1.2.0",
+  "description": "Independent skills for diagram selection and prompt deepening, with drawio-skill for editable diagrams.",
   "author": {
     "name": "kavenGw",
     "url": "https://github.com/kavenGw"
   },
-  "homepage": "https://github.com/kavenGw/diagram-advisor",
-  "repository": "https://github.com/kavenGw/diagram-advisor",
+  "homepage": "https://github.com/kavenGw/GSAgentSkill",
+  "repository": "https://github.com/kavenGw/GSAgentSkill",
   "license": "MIT",
-  "keywords": ["diagram", "drawio", "visualization", "architecture"],
-  "dependencies": ["drawio-skill"]
+  "keywords": [
+    "diagram",
+    "drawio",
+    "visualization",
+    "architecture",
+    "prompt",
+    "planning"
+  ],
+  "dependencies": [
+    "drawio-skill"
+  ]
 }

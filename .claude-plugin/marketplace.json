@@ -1,13 +1,13 @@
 {
-  "name": "diagram-advisor",
-  "description": "diagram-advisor and its drawing dependency drawio-skill.",
+  "name": "gs-agent-skill",
+  "description": "GSAgentSkill: diagram-advisor, deepen-prompt, and the drawing dependency drawio-skill.",
   "owner": {
     "name": "kavenGw",
     "url": "https://github.com/kavenGw"
   },
   "plugins": [
     {
-      "name": "diagram-advisor",
+      "name": "gs-agent-skill",
       "source": "./",
       "category": "productivity"
     },
