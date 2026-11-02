@@ -1,0 +1,3 @@
+interface:
+  display_name: "4K 图片升级"
+  short_description: "按实际显示需求升级图片分辨率，保留构图、透明边缘与原有布局"

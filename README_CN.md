@@ -6,6 +6,8 @@
 
 - **distill-rules**：从用户纠正、任务复盘和实际改动中沉淀项目规则，核验适用边界、重复冲突及读取入口。
 
+- **upscale-for-4k**：按实际显示尺寸升级现有图片，检查视觉保真，并提供按需读取的 Unity 接入指引。
+
 - **diagram-advisor**：先分析你希望用图回答的问题，推荐 2～4 种候选图类型并说明取舍，等你选定后交给 [drawio-skill](https://github.com/Agents365-ai/drawio-skill)（[中文说明](https://github.com/Agents365-ai/drawio-skill/blob/main/README_CN.md)）生成可编辑的 `.drawio` 文件。
 - **deepen-prompt**：从目标与硬约束重新思考当前任务，确认取舍，再把有证据支撑的任务书交给全新 agent 执行并独立核验。仅手动调用，不自动触发。
 - **commit-renames**：从混合 Git 改动中拆出纯文件路径改名提交，保留其他暂存内容与工作区改动。附带 Python 脚本，支持 Unity 配套 .meta。
@@ -26,7 +28,7 @@ Claude Code 插件（自动安装依赖 drawio-skill，固定在已验证版本�
 /plugin install gs-agent-skill@gs-agent-skill
 ```
 
-插件安装后技能名为 `gs-agent-skill:diagram-advisor`、`gs-agent-skill:deepen-prompt`、`gs-agent-skill:commit-renames` 和 `gs-agent-skill:distill-rules`。如果之前在 `~/.claude/skills/` 或项目 `.claude/skills/` 中手动安装了任一技能，切换到插件时请移除其旧入口，避免重复加载。旧 `diagram-advisor` marketplace 用户应先卸载其中的插件并移除旧 marketplace，再安装新版。
+插件安装后技能名为 `gs-agent-skill:diagram-advisor`、`gs-agent-skill:deepen-prompt`、`gs-agent-skill:commit-renames`、`gs-agent-skill:upscale-for-4k` 和 `gs-agent-skill:distill-rules`。如果之前在 `~/.claude/skills/` 或项目 `.claude/skills/` 中手动安装了任一技能，切换到插件时请移除其旧入口，避免重复加载。旧 `diagram-advisor` marketplace 用户应先卸载其中的插件并移除旧 marketplace，再安装新版。
 
 npx：
 
@@ -42,6 +44,7 @@ mkdir -p ~/.claude/skills
 ln -s ~/src/GSAgentSkill/skills/diagram-advisor ~/.claude/skills/diagram-advisor
 ln -s ~/src/GSAgentSkill/skills/deepen-prompt ~/.claude/skills/deepen-prompt
 ln -s ~/src/GSAgentSkill/skills/commit-renames ~/.claude/skills/commit-renames
+ln -s ~/src/GSAgentSkill/skills/upscale-for-4k ~/.claude/skills/upscale-for-4k
 ln -s ~/src/GSAgentSkill/skills/distill-rules ~/.claude/skills/distill-rules
 ```
 
@@ -51,6 +54,7 @@ Windows 下 Git Bash 的 `ln -s` 默认是复制而非链接，请在 `cmd` 中�
 mklink /J "%USERPROFILE%\.claude\skills\diagram-advisor" "%USERPROFILE%\src\GSAgentSkill\skills\diagram-advisor"
 mklink /J "%USERPROFILE%\.claude\skills\deepen-prompt" "%USERPROFILE%\src\GSAgentSkill\skills\deepen-prompt"
 mklink /J "%USERPROFILE%\.claude\skills\commit-renames" "%USERPROFILE%\src\GSAgentSkill\skills\commit-renames"
+mklink /J "%USERPROFILE%\.claude\skills\upscale-for-4k" "%USERPROFILE%\src\GSAgentSkill\skills\upscale-for-4k"
 mklink /J "%USERPROFILE%\.claude\skills\distill-rules" "%USERPROFILE%\src\GSAgentSkill\skills\distill-rules"
 ```
 
@@ -61,6 +65,7 @@ mkdir -p ~/.agents/skills
 ln -s ~/src/GSAgentSkill/skills/diagram-advisor ~/.agents/skills/diagram-advisor
 ln -s ~/src/GSAgentSkill/skills/deepen-prompt ~/.agents/skills/deepen-prompt
 ln -s ~/src/GSAgentSkill/skills/commit-renames ~/.agents/skills/commit-renames
+ln -s ~/src/GSAgentSkill/skills/upscale-for-4k ~/.agents/skills/upscale-for-4k
 ln -s ~/src/GSAgentSkill/skills/distill-rules ~/.agents/skills/distill-rules
 ```
 

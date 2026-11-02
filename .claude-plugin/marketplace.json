@@ -1,6 +1,6 @@
 {
   "name": "gs-agent-skill",
-  "description": "GSAgentSkill: diagram-advisor, deepen-prompt, commit-renames, distill-rules, and the drawing dependency drawio-skill.",
+  "description": "GSAgentSkill: diagram-advisor, deepen-prompt, commit-renames, upscale-for-4k, distill-rules, and the drawing dependency drawio-skill.",
   "owner": {
     "name": "kavenGw",
     "url": "https://github.com/kavenGw"

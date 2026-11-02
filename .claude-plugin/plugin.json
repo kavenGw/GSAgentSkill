@@ -1,7 +1,7 @@
 {
   "name": "gs-agent-skill",
   "version": "1.3.0",
-  "description": "Independent skills for diagram selection, prompt deepening, isolated file-rename commits, and project rule distillation, with drawio-skill for editable diagrams.",
+  "description": "Independent skills for diagram selection, prompt deepening, isolated file-rename commits, 4K image upscaling, and project rule distillation, with drawio-skill for editable diagrams.",
   "author": {
     "name": "kavenGw",
     "url": "https://github.com/kavenGw"
