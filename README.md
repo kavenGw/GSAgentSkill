@@ -4,6 +4,8 @@
 
 A collection of independent agent skills:
 
+- **distill-rules** turns user corrections and task evidence into focused project rules, checking scope, conflicts, and discoverability.
+
 - **diagram-advisor** decides **which diagram to draw** before drawing it. It analyzes the question, recommends 2–4 candidate types with trade-offs, waits for your choice, then hands off to [drawio-skill](https://github.com/Agents365-ai/drawio-skill) to produce an editable `.drawio` file.
 - **deepen-prompt** rethinks the current task from its goals and constraints, confirms trade-offs, and hands a grounded brief to a fresh agent for execution and independent verification. Invoke it explicitly; it is not selected automatically.
 - **commit-renames** isolates file-path renames into a separate Git commit while preserving other staged content and working-tree changes. Includes a Python helper with Unity .meta support.
@@ -24,7 +26,7 @@ Claude Code plugin (installs drawio-skill automatically, pinned to a tested vers
 /plugin install gs-agent-skill@gs-agent-skill
 ```
 
-The plugin exposes `gs-agent-skill:diagram-advisor`, `gs-agent-skill:deepen-prompt`, and `gs-agent-skill:commit-renames`. If any of these skills is already installed manually in `~/.claude/skills/` or a project's `.claude/skills/`, remove its old entry when switching to the plugin to avoid duplicate loading. Existing users of the old `diagram-advisor` marketplace should uninstall its plugins and remove that marketplace before installing this one.
+The plugin exposes `gs-agent-skill:diagram-advisor`, `gs-agent-skill:deepen-prompt`, `gs-agent-skill:commit-renames`, and `gs-agent-skill:distill-rules`. If any of these skills is already installed manually in `~/.claude/skills/` or a project's `.claude/skills/`, remove its old entry when switching to the plugin to avoid duplicate loading. Existing users of the old `diagram-advisor` marketplace should uninstall its plugins and remove that marketplace before installing this one.
 
 npx:
 
@@ -40,6 +42,7 @@ mkdir -p ~/.claude/skills
 ln -s ~/src/GSAgentSkill/skills/diagram-advisor ~/.claude/skills/diagram-advisor
 ln -s ~/src/GSAgentSkill/skills/deepen-prompt ~/.claude/skills/deepen-prompt
 ln -s ~/src/GSAgentSkill/skills/commit-renames ~/.claude/skills/commit-renames
+ln -s ~/src/GSAgentSkill/skills/distill-rules ~/.claude/skills/distill-rules
 ```
 
 On Windows (`ln -s` in Git Bash copies instead of linking), use a junction from `cmd`:
@@ -48,6 +51,7 @@ On Windows (`ln -s` in Git Bash copies instead of linking), use a junction from 
 mklink /J "%USERPROFILE%\.claude\skills\diagram-advisor" "%USERPROFILE%\src\GSAgentSkill\skills\diagram-advisor"
 mklink /J "%USERPROFILE%\.claude\skills\deepen-prompt" "%USERPROFILE%\src\GSAgentSkill\skills\deepen-prompt"
 mklink /J "%USERPROFILE%\.claude\skills\commit-renames" "%USERPROFILE%\src\GSAgentSkill\skills\commit-renames"
+mklink /J "%USERPROFILE%\.claude\skills\distill-rules" "%USERPROFILE%\src\GSAgentSkill\skills\distill-rules"
 ```
 
 For Codex, link each skill into `~/.agents/skills/` instead:
@@ -57,6 +61,7 @@ mkdir -p ~/.agents/skills
 ln -s ~/src/GSAgentSkill/skills/diagram-advisor ~/.agents/skills/diagram-advisor
 ln -s ~/src/GSAgentSkill/skills/deepen-prompt ~/.agents/skills/deepen-prompt
 ln -s ~/src/GSAgentSkill/skills/commit-renames ~/.agents/skills/commit-renames
+ln -s ~/src/GSAgentSkill/skills/distill-rules ~/.agents/skills/distill-rules
 ```
 
 On Windows, use the junction commands above with `.agents` instead of `.claude`. Each `SKILL.md` must end up at `<skills root>/<skill name>/SKILL.md`.
